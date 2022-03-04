@@ -45,6 +45,7 @@ int main () {
         //calculating the stddev of the first field
         sum += a;
         n++;
+        if(n == 1000000)break;
     }
 
     double avg = sum/n;
@@ -56,6 +57,7 @@ int main () {
 
     //second pass: calculating the sum of squared difference
     double sumsqdiff = 0;
+    n = 0;
 
     std::cout << std::endl;
 
@@ -71,6 +73,7 @@ int main () {
         //calculating the stddev of the first field
         double diff = a-avg;
         sumsqdiff += diff*diff;
+        n++;
     }
 
     double stddev = sqrt(sumsqdiff/n);
