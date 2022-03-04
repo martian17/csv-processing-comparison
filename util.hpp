@@ -5,6 +5,8 @@
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <iomanip>
+
 
 size_t filesize(const char *path){
     std::ifstream file(path, std::ifstream::ate | std::ifstream::binary);
