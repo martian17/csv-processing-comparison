@@ -1,8 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <iomanip>
-#include <string>
-#include <map>
 #include <random>
 
 //generates random number between 0 and 1 uniformly
@@ -13,33 +10,23 @@ private:
     std::uniform_real_distribution<double> dist;//distribution pattern
 public:
     Rand(): e2(rd()), dist(0,1){}
-    double gen(){
+    double operator()(){
         return dist(e2);
     }
 };
 
-
 int main(){
+
     Rand rand;
-    std::ofstream file;
-    file.open ("test.csv");
+    std::ofstream file("test.csv");
 
     //header
-    file << "field1,field2" << std::endl;
+    file << "field1,field2\n";
 
     size_t lines = 100000000;
+
     for(size_t i = 0; i < lines; i++){
-        file << rand.gen() << "," << rand.gen() << std::endl;
+        file << rand() << "," << rand() << '\n';
     }
-    std::cout << "done" << std::endl;
-    file.close();
-    return 0;
+    std::cout << "done\n";
 }
-
-
-
-
-
-
-
-
