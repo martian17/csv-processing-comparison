@@ -45,7 +45,6 @@ int main () {
         //calculating the stddev of the first field
         sum += a;
         n++;
-        if(n == 1000000)break;
     }
 
     double avg = sum/n;
