@@ -1,6 +1,6 @@
 # csv-processing-comparison
 
-Usage:
+## Usage
 First create a 1.7gb file using datagen.cpp
 ```bash
 c++ datagen.cpp && ./a.out
