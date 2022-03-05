@@ -21,7 +21,7 @@ int main(){
     double sumsq = 0;
     fprintf(stderr,"\n");
     while(1){
-        if(n%100000 == 0){
+        if(n%10000 == 0){
             fprintf(stderr,"\033[Fprogress: %f%%\n",((float)(ftell(file)))/(float)size*100);
         }
 
