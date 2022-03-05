@@ -22,5 +22,6 @@ field1,field2
 
 Next, test out indivisual processing files
 ```bash
-c++ stddev.onepass.cpp && time ./a.out
+cd cpp
+c++ sd.single.cpp && time ./a.out
 ```
