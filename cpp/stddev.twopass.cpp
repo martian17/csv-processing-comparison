@@ -10,7 +10,7 @@
 int main () {
     //wrapper class to make the size count a bit easier
     //the api should be preserved
-    ifwrapper file("test.csv");
+    ifwrapper file("../test.csv");
     if (!file.is_open()){
         std::cout << "Unable to open file";
         return 1;

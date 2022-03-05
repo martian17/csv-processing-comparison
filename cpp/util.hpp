@@ -21,12 +21,16 @@ void displayProgress(const char *msg, double n1, double n2){
               "%               \n";
 }
 
+
+char IfBuffer[60000];
+
 //keeps track of the filesize etc
 class ifwrapper : public std::ifstream{
 public:
     size_t size;
     size_t start;
     ifwrapper(const char *path): std::ifstream(path) {
+        this->rdbuf()->pubsetbuf(IfBuffer, 60000);
         size = filesize(path);
         start = tellg();
     }
