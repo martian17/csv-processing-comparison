@@ -1,10 +1,3 @@
-// reading a text file
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
-#include <cmath>
-
 #include "util.hpp"
 
 int main () {
